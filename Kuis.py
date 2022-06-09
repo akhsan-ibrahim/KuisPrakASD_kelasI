@@ -39,10 +39,18 @@ E = _SimpulPohonBiner(5)
 A.kiri = B; A.kanan = C
 C.kiri = D; C.kanan = E
 
-def terluar(sub):
+def terluarkiri(sub):
     if sub is not None:
-        terluar(sub.kiri)
+        terluarkiri(sub.kiri)
         print(sub.data)
-        terluar(sub.kanan)
+
+def terluarkanan(sub):
+    if sub is not None:
+        print(sub.data)
+        terluarkanan(sub.kanan)
+
+def terluar(sube):
+    terluarkiri(sube)
+    terluarkanan(sube)
 
 terluar(A)
